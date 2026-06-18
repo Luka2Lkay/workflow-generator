@@ -1,5 +1,6 @@
 import WorkflowForm from "../../components/workflow_form/WorkflowForm"
 import { useWorkflowAnalysis } from "../../hooks/use_workflow_analysis"
+import WorkflowSteps from "../../components/workflow_steps/WorkflowSteps";
 
 export default function Dashboard() {
 
@@ -13,7 +14,10 @@ export default function Dashboard() {
 
             {loading &&(<p>Analyzing...</p>)}
 
-            {analysis}
+            {/* {analysis && ( */}
+              <WorkflowSteps steps={analysis?.steps} />
+
+            {/* )} */}
     </div>
   )
 }
