@@ -58,3 +58,18 @@ Every week I download tenant payment data from our property management system, c
 Save 3–5 hours per week
 Reduce reporting errors
 Improve operational efficiency
+
+## Tech Stack
+
+### Frontend
+- React
+- TypeScript
+- Tailwind CSS
+- TanStack Query
+
+### Backend
+- Node.js
+- Express
+
+### AI
+- OpenAI API
