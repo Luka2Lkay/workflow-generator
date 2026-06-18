@@ -1,15 +1,14 @@
 import axios from "axios";
 
-interface Props {
-  description: string;
-  url: string;
-}
+const BASE_URL = import.meta.env.BASE_URL;
 
-export const analyzeWorkflow = async ({ url, description }: Props) => {
+export const analyzeWorkflow = async (description: string) => {
   try {
-    const response = await axios.post(url, { description });
+    const response = await axios.post(`${BASE_URL}/api/analyze`, {
+      description,
+    });
 
-    return response;
+    return response.data;
   } catch (error) {
     console.error("Failed to post", error);
     throw new Error("Failed to post");
