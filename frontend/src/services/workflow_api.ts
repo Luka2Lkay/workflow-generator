@@ -1,7 +1,9 @@
 import axios from "axios";
 import { type Analysis } from "../interfaces/interface";
 
-const BASE_URL = import.meta.env.VITE_BASE_URL;
+const BASE_URL =
+  import.meta.env.VITE_BASE_URL ||
+  "https://workflow-generator-backend.onrender.com";
 
 export const analyzeWorkflow = async (description: string) => {
   try {
