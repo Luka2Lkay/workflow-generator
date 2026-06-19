@@ -19,7 +19,7 @@ function Bottlenecks({ bottlenecks }: Props) {
 
             <div className="space-y-3">
                 {bottlenecks.map((bottleneck, index) => (
-                    <div key={index} className="flex gap-3 p-4 rounded-lg border bg-red-50 w-1/2">
+                    <div key={index} className="flex gap-3 p-4 rounded-lg border bg-red-50 w-1/2 justify-center">
                         <span className="font-semibold text-red-600">
                             {index + 1}
                         </span>
