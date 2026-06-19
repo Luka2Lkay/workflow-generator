@@ -13,7 +13,8 @@ export const useWorkflowAnalysis = () => {
       console.log("description")
       const result = await analyzeWorkflow(description);
 
-      setAnalysis(result);
+      // setAnalysis(result);
+      setAnalysis(null)
       return result
     } finally {
       setLoading(false);
