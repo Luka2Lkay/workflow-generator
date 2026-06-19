@@ -10,7 +10,6 @@ export const useWorkflowAnalysis = () => {
     setLoading(true);
 
     try {
-      console.log("description")
       const result = await analyzeWorkflow(description);
 
       // setAnalysis(result);
