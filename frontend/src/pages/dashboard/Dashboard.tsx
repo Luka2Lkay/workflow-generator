@@ -13,7 +13,7 @@ export default function Dashboard() {
       <h1 className="text-center mt-4 font-bold text-xl">Workflow Generator</h1>
       <WorkflowForm onSubmit={runAnalysis} />
 
-      {loading && (<p>Analyzing...</p>)}
+      {loading && (<p className="text-center">Analyzing...</p>)}
 
       {analysis && (
         <>

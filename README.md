@@ -53,9 +53,10 @@ Every week I download tenant payment data from our property management system, c
 
 #### Bottlenecks
 
-- Manual data transfer
-- Repetitive calculations
-- Manual report distribution
+- Manual download and copy-paste of data is time-consuming and error-prone
+- Manual calculation of arrears increases risk of errors
+- No standardized report format (if applicable)
+- Repetitive weekly task with no automation
 
 #### Recommendations
 
