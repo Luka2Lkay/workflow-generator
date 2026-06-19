@@ -1,4 +1,4 @@
-const { buildWorkflowPrompt} = require("../utils/prompt");
+const { buildWorkflowPrompt } = require("../utils/prompt");
 const { generateWorkflowAnalysis } = require("../services/openrouter_service");
 
 const analyzeWorkflow = async (req, res) => {
@@ -6,7 +6,6 @@ const analyzeWorkflow = async (req, res) => {
     const { description } = req.body;
     const prompt = await buildWorkflowPrompt(description);
     const response = await generateWorkflowAnalysis(prompt);
-  //  const parsed = JSON.parse(response);
 
     res.status(200).json(response);
   } catch (error) {
