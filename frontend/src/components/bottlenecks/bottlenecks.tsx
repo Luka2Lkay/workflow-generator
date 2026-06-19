@@ -9,8 +9,8 @@ function Bottlenecks({ bottlenecks }: Props) {
     if (!bottlenecks.length) return null;
 
     return (
-        <div className="flex justify-center bg-white rounded-lg border p-6 shadow-sm">
-            <div className="flex items-center gap-4">
+        <div className="bg-white rounded-lg border p-6 shadow-sm">
+            <div className="flex items-center justify-center gap-4">
                 <AlertTriangle className="h-5 w-5" />
                 <h2 className="text-xl font-semibold">
                     Identified Bottlenecks
