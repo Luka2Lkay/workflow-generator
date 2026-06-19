@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { analyzeWorkflow } from "../services/workflow_api";
-
+import { type Analysis } from "../interfaces/interface";
 
 export const useWorkflowAnalysis = () => {
-  const [loading, setLoading] = useState(false);
-  const [analysis, setAnalysis] = useState(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [analysis, setAnalysis] = useState<Analysis | null>(null);
 
   const runAnalysis = async (description: string) => {
     setLoading(true);
