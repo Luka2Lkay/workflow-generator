@@ -1,15 +1,11 @@
 import WorkflowForm from "../../components/workflow_form/WorkflowForm"
 import { useWorkflowAnalysis } from "../../hooks/use_workflow_analysis"
 import WorkflowSteps from "../../components/workflow_steps/WorkflowSteps";
-import { useEffect } from "react";
 
 export default function Dashboard() {
 
   const { loading, analysis, runAnalysis } = useWorkflowAnalysis();
 
-  useEffect(() => {
-    console.log("Here is the analysis: ", analysis)
-  })
   return (
     <div>
 
