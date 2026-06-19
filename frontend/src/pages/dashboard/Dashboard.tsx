@@ -14,7 +14,7 @@ export default function Dashboard() {
       <h1 className="text-center mt-4 font-bold text-xl">Workflow Generator</h1>
       <WorkflowForm onSubmit={runAnalysis} />
 
-      {loading && (<div className="mx-auto">
+      {loading && (<div className="flex flex-col items-center">
         <Loader className="h-5 w-5 mt-5 mb-2" />
         <p>Analyzing...</p>
       </div>)}
