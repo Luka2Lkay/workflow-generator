@@ -6,11 +6,13 @@ const port = process.env.PORT || 3000;
 
 const { workflowRouter } = require("./routes/routes");
 
+const BASE_URL = process.env.BASE_URL;
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: "http://localhost:5173https://workflow-generator-iz7g.onrender.com",
+    origin: BASE_URL,
     methods: ["POST"],
     credentials: true,
     allowedHeaders: ["Authorization", "Content-Type"],
