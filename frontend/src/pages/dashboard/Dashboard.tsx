@@ -1,6 +1,7 @@
 import WorkflowForm from "../../components/workflow_form/WorkflowForm"
 import { useWorkflowAnalysis } from "../../hooks/use_workflow_analysis"
 import WorkflowSteps from "../../components/workflow_steps/WorkflowSteps";
+import Bottlenecks from "../../components/bottlenecks/bottlenecks";
 
 export default function Dashboard() {
 
@@ -15,10 +16,15 @@ export default function Dashboard() {
       {loading && (<p>Analyzing...</p>)}
 
       {analysis && (
-        <WorkflowSteps steps={analysis?.steps} />
+        <>
+          <WorkflowSteps steps={analysis?.steps} />
+
+          <Bottlenecks bottlenecks={analysis?.bottlenecks} />
+        </>
+
       )}
 
-      
+
     </div>
   )
 }

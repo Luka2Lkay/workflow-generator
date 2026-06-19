@@ -4,7 +4,7 @@ interface Props {
     bottlenecks: string[]
 }
 
-function bottlenecks({ bottlenecks }: Props) {
+function Bottlenecks({ bottlenecks }: Props) {
 
     if (!bottlenecks.length) return null;
 
@@ -35,4 +35,4 @@ function bottlenecks({ bottlenecks }: Props) {
     )
 }
 
-export default bottlenecks
+export default Bottlenecks
