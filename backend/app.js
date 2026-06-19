@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://localhost:5173https://workflow-generator-iz7g.onrender.com",
     methods: ["POST"],
     credentials: true,
     allowedHeaders: ["Authorization", "Content-Type"],
