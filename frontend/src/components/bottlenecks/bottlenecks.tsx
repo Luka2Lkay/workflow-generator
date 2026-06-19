@@ -10,14 +10,14 @@ function Bottlenecks({ bottlenecks }: Props) {
 
     return (
         <div className="bg-white rounded-lg border p-6 shadow-sm">
-            <div className="flex items-center justify-center gap-4">
+            <div className="mx-auto gap-4">
                 <AlertTriangle className="h-5 w-5" />
                 <h2 className="text-xl font-semibold">
                     Identified Bottlenecks
                 </h2>
             </div>
 
-            <div className="space-y-3">
+            <div className="space-y-3 flex justify-center ">
                 {bottlenecks.map((bottleneck, index) => (
                     <div key={index} className="flex gap-3 p-4 rounded-lg border bg-red-50 w-1/2">
                         <span className="font-semibold text-red-600">
