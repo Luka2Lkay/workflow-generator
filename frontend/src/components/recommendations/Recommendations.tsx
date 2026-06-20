@@ -38,7 +38,7 @@ function Recommendations({ recommendations, tools = [], estimatedSavings }: Reco
 
             {
                 estimatedSavings && (
-                    <div className="mt-6 border-t pt-4 w-1/2 flex flex-col items">
+                    <div className="mt-6 border-t pt-4 text-center">
                         <p className="font-medium">Estimated Time Savings</p>
                         <p className="text-lg mt-1">{estimatedSavings}</p>
                     </div>
