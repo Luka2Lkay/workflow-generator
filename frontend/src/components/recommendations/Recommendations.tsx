@@ -21,10 +21,29 @@ function Recommendations({ recommendations, tools = [], estimatedSavings }: Reco
                             <p>{recommendation}</p>
                         </div>
                     </div>
-                ))
-
-                }
+                ))}
             </div>
+
+            {tools.length > 0 && (
+                <div className="mt-6">
+                    <h3 className="font-medium mb-3">Suggested Tools</h3>
+
+                    <div className="flex flex-wrap gap-2">
+                        {tools.map((tool) => (
+                            <span key={tool} className="px-3 py-1 rounded-full border text-sm">{tool}</span>
+                        ))}
+                    </div>
+                </div>
+            )}
+
+            {
+                estimatedSavings && (
+                    <div className="mt-6 border-t pt-4">
+                        <p className="font-medium">Estimated Time Savings</p>
+                        <p className="text-lg mt-1">{estimatedSavings}</p>
+                    </div>
+                )
+            }
         </section>
     )
 }
