@@ -1,6 +1,6 @@
-import { type Recommendations } from "../../interfaces/interface";
+import { type RecommendationsProps } from "../../interfaces/interface";
 
-function Recommendations({ recommendations, tools = [], estimatedSavings }: Recommendations) {
+function Recommendations({ recommendations, tools = [], estimatedSavings }: RecommendationsProps) {
     return (
         <section className="bg-white rounded-xl shadow p-6">
             <div className="mb-4">

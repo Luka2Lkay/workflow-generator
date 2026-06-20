@@ -2,6 +2,7 @@ import WorkflowForm from "../../components/workflow_form/WorkflowForm"
 import { useWorkflowAnalysis } from "../../hooks/use_workflow_analysis"
 import WorkflowSteps from "../../components/workflow_steps/WorkflowSteps";
 import Bottlenecks from "../../components/bottlenecks/Bottlenecks";
+import Recommendations from "../../components/recommendations/Recommendations";
 import { Loader } from "lucide-react";
 
 export default function Dashboard() {
@@ -24,11 +25,10 @@ export default function Dashboard() {
           <WorkflowSteps steps={analysis?.steps} />
 
           <Bottlenecks bottlenecks={analysis?.bottlenecks} />
+
+          <Recommendations recommendations={analysis?.recommendations} tools={analysis?.tools} estimatedSavings={analysis?.estimatedSavings} />
         </>
-
       )}
-
-
     </div>
   )
 }

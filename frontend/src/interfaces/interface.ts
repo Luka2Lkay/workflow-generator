@@ -6,7 +6,7 @@ export interface Analysis {
   estimatedSavings: string;
 }
 
-export interface Recommendations {
+export interface RecommendationsProps {
   recommendations: string[];
   tools?: string[];
   estimatedSavings?: string;
