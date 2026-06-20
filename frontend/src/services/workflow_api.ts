@@ -11,7 +11,6 @@ export const analyzeWorkflow = async (description: string) => {
       description,
     });
 
-    console.log("data: ", response.data);
     return response.data;
   } catch (error) {
     console.error("Failed to post", error);
