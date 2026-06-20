@@ -10,7 +10,7 @@ function Recommendations({ recommendations, tools = [], estimatedSavings }: Reco
                 </p>
             </div>
 
-            <div className="space-y-3 flex justify-center">
+            <div className="space-y-3 flex flex-col items-center">
                 {recommendations.map((recommendation, index) => (
                     <div key={index} className="border rounder-lg p-4 w-1/2">
                         <div className="flex items-start gap-3">
@@ -26,9 +26,9 @@ function Recommendations({ recommendations, tools = [], estimatedSavings }: Reco
 
             {tools.length > 0 && (
                 <div className="mt-6">
-                    <h3 className="font-medium mb-3">Suggested Tools</h3>
+                    <h3 className="font-medium mb-3 text-center">Suggested Tools</h3>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 justify-center">
                         {tools.map((tool) => (
                             <span key={tool} className="px-3 py-1 rounded-full border text-sm">{tool}</span>
                         ))}
@@ -38,7 +38,7 @@ function Recommendations({ recommendations, tools = [], estimatedSavings }: Reco
 
             {
                 estimatedSavings && (
-                    <div className="mt-6 border-t pt-4">
+                    <div className="mt-6 border-t pt-4 w-1/2 flex flex-col items">
                         <p className="font-medium">Estimated Time Savings</p>
                         <p className="text-lg mt-1">{estimatedSavings}</p>
                     </div>
